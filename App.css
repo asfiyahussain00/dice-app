@@ -1,0 +1,174 @@
+/* Add this to your existing App.css */
+
+.dice {
+  background: #3267b3;
+  color: #79828f;
+  font-size: 48px;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px #c8d0e7, -6px -6px 12px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+  perspective: 1000px;
+}
+
+.dice.rolling {
+  animation: rotateDice 0.6s ease-in-out;
+}
+
+@keyframes rotateDice {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(180deg) rotateY(90deg);
+  }
+  50% {
+    transform: rotateX(270deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(360deg) rotateY(270deg);
+  }
+  100% {
+    transform: rotateX(0deg) rotateY(360deg);
+  }
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #3267b3;
+ 
+  color: #333;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #436caa;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 8px 8px 20px #c8d0e7, -8px -8px 20px #ffffff;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  background: #e0e5ec;
+  box-shadow: inset 6px 6px 12px #c8d0e7, inset -6px -6px 12px #ffffff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  box-shadow: inset 4px 4px 8px #c8d0e7, inset -4px -4px 8px #ffffff;
+  background-color: #fff;
+}
+
+.btn, button {
+  background: #e0e5ec;
+  color: #333;
+  padding: 12px 24px;
+  margin-top: 15px;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 6px 6px 12px #c8d0e7, -6px -6px 12px #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn:hover, button:hover {
+  transform: scale(1.03);
+  box-shadow: 4px 4px 8px #c8d0e7, -4px -4px 8px #ffffff;
+}
+
+.dice-box {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.dice {
+  background: #e0e5ec;
+  color: #2f3640;
+  font-size: 48px;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  box-shadow: 6px 6px 12px #c8d0e7, -6px -6px 12px #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.dice:active {
+  transform: scale(0.95);
+}
+
+p {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #444;
+}
+
+
+body {
+  background: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.dice {
+  background: #ff6b6b;
+  color: #ffffff;
+  font-size: 48px;
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.btn, button {
+  background: #4dabf7;
+  color: #fff;
+  box-shadow: 0 4px 15px rgba(77, 171, 247, 0.3);
+}
+
+.btn:hover, button:hover {
+  background: #339af0;
+  transform: scale(1.05);
+}
+
+input {
+  background: #f1f3f5;
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.05);
+}
