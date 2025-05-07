@@ -10,6 +10,15 @@ function App() {
   const [message, setMessage] = useState('');
   const [rolling, setRolling] = useState(false);
 
+  const diceEmojis = {
+    1: '⚀',
+    2: '⚁',
+    3: '⚂',
+    4: '⚃',
+    5: '⚄',
+    6: '⚅'
+  };
+
   function handleStart() {
     if (name1 !== "" && name2 !== "") {
       setShowGame(true);
@@ -64,11 +73,13 @@ function App() {
           <h3>{name1} VS {name2}</h3>
 
           <div className="dice-box">
-            <div className={`dice ${rolling ? 'rolling' : ''}`}>{dice1}</div>
-            <div className={`dice ${rolling ? 'rolling' : ''}`}>{dice2}</div>
+            <div className={`dice ${rolling ? 'rolling' : ''}`}>{diceEmojis[dice1]}</div>
+            <div className={`dice ${rolling ? 'rolling' : ''}`}>{diceEmojis[dice2]}</div>
           </div>
 
-          <button onClick={handleRoll}>Roll Dice</button>
+          <button onClick={handleRoll} disabled={rolling}>
+            {rolling ? "Rolling..." : "Roll Dice"}
+          </button>
           <p>{message}</p>
         </>
       )}
